@@ -28,13 +28,13 @@ async def obtener_request_from_url(url: str, headless: bool = True, timeout: int
     
     
     # Ejecutar el rastreador de recursos
-    resources = asyncio.run(track_resources(
+    resources = await track_resources(
         url, 
         headless, 
         timeout, 
         accept_cookies,
         cookies_selector
-    ))
+    )
     return resources
     
 
